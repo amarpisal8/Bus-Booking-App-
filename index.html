@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- First Section: Sidebar -->
+            <div class="col-md-3 bg-dark text-light">
+                <div class="py-4 px-3">
+                    <h2 class="mb-4">Bus Booking</h2>
+                    <div class="form-group">
+                        <label for="bus-filter">Filter</label>
+                        <select class="form-control" id="bus-filter">
+                            <option value="all">All</option>
+                            <option value="bus1">Bus 1</option>
+                            <option value="bus2">Bus 2</option>
+                            <option value="bus3">Bus 3</option>
+                        </select>
+                    </div>
+                    <form id="passenger-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="bus-selection">
+                                <option value="bus1">Bus 1</option>
+                                <option value="bus2">Bus 2</option>
+                                <option value="bus3">Bus 3</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Second Section: Passenger List -->
+            <div class="col-md-9">
+                <div class="py-4 px-3">
+                    <h2 class="mb-4">Passenger List</h2>
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Bus</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="passenger-table">
+                            <!-- Passenger data will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
